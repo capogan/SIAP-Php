@@ -14,6 +14,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+Route::post('/add/user', 'Api\AuthController@add_user')->name('api.add.user');
+Route::post('/login/user', 'Api\AuthController@login_user')->name('api.login.user');

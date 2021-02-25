@@ -5,7 +5,7 @@
             <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
                 <div class="footer-logo">
                     <!-- Footer Logo -->
-                    <img src="images/ft-logo.png" alt="Borrow - Loan Company Website Templates"> </div>
+                    <img src="/images/default_logo.png" alt="Borrow - Loan Company Website Templates"> </div>
                 <!-- /.Footer Logo -->
             </div>
             <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12">
@@ -96,12 +96,13 @@
     <!-- tiny footer -->
     <div class="container">
         <div class="row">
-            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
-                <p><a target="_blank" href="https://www.templateshub.net">Templates Hub</a></p>
-            </div>
-            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 text-right">
-                <p>Terms of use | Privacy Policy</p>
-
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                <h3 class="newsletter-title">Disclaimer</h3>
+                <ul class="bullet bullet-check-circle list-unstyled">
+                    @foreach($term_of_condition as $key => $row)
+                        <li><p>{{$row->persyaratan}}</p></li>
+                    @endforeach
+                </ul>
             </div>
         </div>
     </div>

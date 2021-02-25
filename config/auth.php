@@ -40,12 +40,17 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
-
         'api' => [
             'driver' => 'token',
-            'provider' => 'users',
+            'provider' => 'pengguna',
             'hash' => false,
         ],
+
+        'pengguna' => [
+            'driver' => 'session',
+            'provider' => 'pengguna',
+        ],
+
     ],
 
     /*
@@ -69,6 +74,10 @@ return [
         'users' => [
             'driver' => 'eloquent',
             'model' => App\User::class,
+        ],
+        'pengguna' => [
+            'driver' => 'eloquent',
+            'model' => App\Members::class,
         ],
 
         // 'users' => [
@@ -99,6 +108,7 @@ return [
             'expire' => 60,
             'throttle' => 60,
         ],
+
     ],
 
     /*
